@@ -4,11 +4,15 @@
   width: 33%;
   padding: @spacing;
   text-align: center;
+  display:flex;
+  flex-direction: column;
 
   &__content-wrapper {
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.35);
     padding: @spacing-large;
     min-height: 8em;
+    display:flex;
+    flex-direction: column;
   }
 
   &__label {
@@ -24,14 +28,18 @@
     padding-top: @spacing-large;
     color: @fontColor;
     font-size: 1.2em;
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   @media (max-width: @tablet-break-point) {
-    width: 50%;
+    min-width: 50%;
   }
 
   @media (max-width: @mobile-break-point) {
-    width: 100%;
+    min-width: 100%;
   }
 }
 

@@ -24,6 +24,10 @@
                     "value": "1"
                 },
                 {
+                    "label": "Auto",
+                    "value": "auto"
+                },
+                {
                     "label": "Off",
                     "value": "0"
                 }
