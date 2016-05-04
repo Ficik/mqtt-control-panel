@@ -1,4 +1,5 @@
 import Control from './controls/Control.js';
+import BaseEditor from './editor/BaseEditor.js';
 
 /**
  * Controls wrapper
@@ -14,6 +15,7 @@ export default class Dashboard extends React.Component {
                         return <Control configuration={control} store={store} key={index}/>
                     })
                 }
+                <BaseEditor configuration={this.props.configuration.controls[0]}/>
             </div>
         )
     }

@@ -1,8 +1,41 @@
 .switch-control {
-	
+  .no-select;
+
   &__value {
     font-size: 20px;
     border: none;
     text-align: center;
+    display: none;
+  }
+
+  &__label {
+    display: inline-block;
+    padding-right: 10px;
+    line-height: 24px;
+  }
+
+  &__label::before {
+    content: "";
+    box-shadow: 0 0 0 2px #333, inset 0 0 0 10px white;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-left: 10px;
+    transition: all 300ms;
+  }
+
+  &__label:active::before {
+    box-shadow: 0 0 0 2px #333, inset 0 0 0 10px white, 0 0 0 16px fade(#333, 50%);
+  }
+
+  &__label--checked::before {
+    background-color: @controllerColor;
+    box-shadow: 0 0 0 2px @controllerColor, inset 0 0 0 2px white;
+  }
+
+  &__label--checked:active::before {
+    box-shadow: 0 0 0 2px @controllerColor, inset 0 0 0 10px white, 0 0 0 16px fade(@controllerColor, 50%);
   }
 }
