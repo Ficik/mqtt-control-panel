@@ -3,14 +3,17 @@
   display: inline-block;
   width: 33%;
   padding: @spacing;
-
+  display:flex;
+  flex-direction: column;
 
   &__content-wrapper {
     box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.25);
     padding: @spacing-large;
     min-height: 8em;
     border-radius: 2px;
-   background-color: #fff;
+    background-color: #fff;
+    display:flex;
+    flex-direction: column;
   }
 
   &__label {
@@ -30,15 +33,18 @@
     padding-top: @spacing-large;
     color: @fontColor;
     font-size: 1.2em;
-    text-align: center;
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   @media (max-width: @tablet-break-point) {
-    width: 50%;
+    min-width: 50%;
   }
 
   @media (max-width: @mobile-break-point) {
-    width: 100%;
+    min-width: 100%;
   }
 }
 
