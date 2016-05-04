@@ -11,7 +11,7 @@ export default class SwitchControl extends BaseControl {
                 {
                     this.configuration.options.map((option, index) => {
                         return (
-                            <label key={index}>
+                            <label key={index} className={["switch-control__label", this.value === option.value ? "switch-control__label--checked": ""]}>
                                 <input
                                     name={this.configuration.label}
                                     type="radio"

@@ -11,7 +11,9 @@ export default class Control extends React.Component {
             <div className="control">
                 <div className="control__content-wrapper">
                     <h3 className="control__label">{ this.props.configuration.label }</h3>
+                    <div className="control__content">
                     { this.renderControl(this.props.configuration) }
+                    </div>
                 </div>
             </div>
         );
