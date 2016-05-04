@@ -30,7 +30,7 @@ export default class MqttStore extends SimpleStore {
         this.send = _.debounce((key, value) => {
             console.log('sending', key, value);
             this.client.send(key, value);
-        }, 100);
+        }, 500);
         
         this.connect();
     }

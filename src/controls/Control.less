@@ -1,14 +1,13 @@
 .control {
   box-sizing: border-box;
   display: inline-block;
-  width: 50%;
+  width: 33%;
   padding: @spacing;
 
 
   &__content-wrapper {
-    border: 1px solid silver;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.65);
-    padding: @spacing;
+    padding: @spacing-large;
   }
 
   &__label {
@@ -21,4 +20,15 @@
     padding-left: @spacing;
     padding-right: @spacing;
   }
+
+  @media (max-width: @tablet-break-point) {
+    width: 50%;
+  }
+
+  @media (max-width: @mobile-break-point) {
+    width: 100%;
+  }
 }
+
+
+

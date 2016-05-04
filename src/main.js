@@ -16,7 +16,7 @@ fetch('/samples/all.json')
         };
 
         window.store = new MqttStore({
-            server: localStorage.getItem('MQTTServer') || '0.0.0.0',
+            server: localStorage.getItem('MQTTServer') || window.location.hostname,
             port: 9001
         }, update);
         update(window.store);

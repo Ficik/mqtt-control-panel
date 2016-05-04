@@ -7,7 +7,7 @@ export default class TextControl extends BaseControl {
 
     render() {
         return (
-            <div className="textControl">
+            <div className="text-control">
                 <input type="text"
                        className="text-control__value"
                        placeholder="No value"

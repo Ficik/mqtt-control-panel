@@ -2,8 +2,15 @@
 
 export default class BaseControl extends React.Component {
 
+    componentDidMount() {
+        this.subscribe();
+    }
 
     componentWillUpdate() {
+        this.subscribe();
+    }
+
+    subscribe() {
         this.store.subscribe(this.configuration.endpoint);
     }
 
