@@ -1,0 +1,38 @@
+{
+    "name": "All Dashboard",
+    "controls": [
+        {
+            "type": "Text",
+            "label": "Sample Text",
+            "endpoint": "/samples/text",
+            "retained": false,
+            "publish": true,
+            "subscribe": true,
+            "qos": 0
+        },
+        {
+            "type": "Switch",
+            "label": "Sample Switch",
+            "endpoint": "/sample/switch",
+            "retained": false,
+            "publish": true,
+            "subscribe": true,
+            "qos": 0,
+            "options": [
+                {
+                    "label": "On",
+                    "value": "1"
+                },
+                {
+                    "label": "Off",
+                    "value": "0"
+                }
+            ]
+        },
+        {
+            "type": "Countdown",
+            "label": "Sample Countdown",
+            "endpoint": "/sample/countdown"
+        }
+    ]
+}
